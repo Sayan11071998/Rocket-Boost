@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 323270734}
   serializedVersion: 2
   m_LocalRotation: {x: 0.061706875, y: -0.045202658, z: 0.0027962613, w: 0.9970663}
-  m_LocalPosition: {x: -7.586788, y: 4.5261025, z: -12.472321}
+  m_LocalPosition: {x: -7.5867887, y: 4.7661023, z: -12.47232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.061706875, y: -0.045202658, z: 0.0027962613, w: 0.9970663}
-  m_LocalPosition: {x: -7.586788, y: 4.5261025, z: -12.472321}
+  m_LocalPosition: {x: -7.5867887, y: 4.7661023, z: -12.47232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -754,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5568407733926093285, guid: 2df02a26d2ba99e4bbc0e3011f33ac6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.97
+      value: 3.21
       objectReference: {fileID: 0}
     - target: {fileID: 5568407733926093285, guid: 2df02a26d2ba99e4bbc0e3011f33ac6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -807,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 62576635883340552, guid: 7a99d1e43ccf3c04cb459e1113cfeb0f, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 834715911538645426, guid: 7a99d1e43ccf3c04cb459e1113cfeb0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,6 +848,14 @@ PrefabInstance:
     - target: {fileID: 834715911538645426, guid: 7a99d1e43ccf3c04cb459e1113cfeb0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718478352727552231, guid: 7a99d1e43ccf3c04cb459e1113cfeb0f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.631366
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718478352727552231, guid: 7a99d1e43ccf3c04cb459e1113cfeb0f, type: 3}
+      propertyPath: m_Center.y
+      value: 0.315683
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
