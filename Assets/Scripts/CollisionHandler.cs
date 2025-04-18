@@ -1,21 +1,19 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [SerializeField] private AudioClip successSFX;
-    [SerializeField] private AudioClip crashSFX;
-    [SerializeField] private ParticleSystem successParticles;
-    [SerializeField] private ParticleSystem crashParticles;
+    [SerializeField] float levelLoadDelay = 2f;
+    [SerializeField] AudioClip successSFX;
+    [SerializeField] AudioClip crashSFX;
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem crashParticles;
 
-    [SerializeField] private float levelLoadDelay = 2f;
+    AudioSource audioSource;
 
-    private AudioSource audioSource;
-
-    private bool isControllable = true;
-    private bool isCollidable = true;
+    bool isControllable = true;
+    bool isCollidable = true;
 
     private void Start()
     {
@@ -27,9 +25,17 @@ public class CollisionHandler : MonoBehaviour
         RespondToDebugKeys();
     }
 
+    void RespondToDebugKeys()
+    {
+        if (Keyboard.current.lKey.wasPressedThisFrame)
+            LoadNextLevel();
+        else if (Keyboard.current.cKey.wasPressedThisFrame)
+            isCollidable = !isCollidable;
+    }
+
     private void OnCollisionEnter(Collision other)
     {
-        if (!isControllable || !isCollidable) return;
+        if (!isControllable || !isCollidable) { return; }
 
         switch (other.gameObject.tag)
         {
@@ -45,19 +51,7 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
-    private void RespondToDebugKeys()
-    {
-        if (Keyboard.current.lKey.wasPressedThisFrame)
-        {
-            LoadNextLevel();
-        }
-        else if (Keyboard.current.cKey.wasPressedThisFrame)
-        {
-            isCollidable = !isCollidable;
-        }
-    }
-
-    private void StartSuccessSequence()
+    void StartSuccessSequence()
     {
         isControllable = false;
         audioSource.Stop();
@@ -67,7 +61,7 @@ public class CollisionHandler : MonoBehaviour
         Invoke("LoadNextLevel", levelLoadDelay);
     }
 
-    private void StartCrashSequence()
+    void StartCrashSequence()
     {
         isControllable = false;
         audioSource.Stop();
@@ -77,7 +71,7 @@ public class CollisionHandler : MonoBehaviour
         Invoke("ReloadLevel", levelLoadDelay);
     }
 
-    private void LoadNextLevel()
+    void LoadNextLevel()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = currentScene + 1;
@@ -88,7 +82,7 @@ public class CollisionHandler : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
-    private void ReloadLevel()
+    void ReloadLevel()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
