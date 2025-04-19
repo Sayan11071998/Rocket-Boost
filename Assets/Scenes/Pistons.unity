@@ -42,7 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1710,11 +1711,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 897917648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb3ffa20187002b4ca9135883212d464, type: 3}
+  m_Script: {fileID: 11500000, guid: 4241a536f79ac0042be77f3337ee4a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: -100, y: 0, z: 0}
-  speed: 0.05
+  movementVector: {x: -11.3, y: 0, z: 0}
+  speed: 0.5
 --- !u!1001 &906931527
 PrefabInstance:
   m_ObjectHideFlags: 0
