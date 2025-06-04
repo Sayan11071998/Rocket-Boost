@@ -65,6 +65,7 @@ Building **Rocket Boost** has been an incredible exploration of physics-based ga
 The modular architecture allows for easy expansion with new obstacle types, level mechanics, and flight challenges while maintaining clean, readable code. The integration of Unity's new Input System showcases modern development practices while the physics-driven approach creates genuinely satisfying rocket piloting experiences that reward player skill and persistence.
 
 ## Play Link
+https://sayannandi.itch.io/rocket-boost
 
 [![Watch the video](https://img.youtube.com/vi/AIq7QW8iHjo/maxresdefault.jpg)](https://youtu.be/AIq7QW8iHjo)
 ### [Gameplay Video](https://youtu.be/AIq7QW8iHjo)
